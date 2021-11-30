@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=new style 0] (1) at (-3, 3) {$n_2$};
+		\node [style=new style 0] (2) at (3, 3) {$n_3$};
+		\node [style=new style 0] (3) at (7, 0) {$n_6$};
+		\node [style=new style 0] (4) at (3, -3) {$n_5$};
+		\node [style=new style 0] (5) at (-3, -3) {$n_4$};
+		\node [style=new style 0] (6) at (-7, 0) {$n_1$};
+		\node [style=none] (7) at (0.25, 0.25) {$e_7$};
+		\node [style=none] (8) at (-5.25, 2) {$e_1$};
+		\node [style=none] (9) at (0, 3.25) {$e_2$};
+		\node [style=none] (10) at (5.25, 1.75) {$e_3$};
+		\node [style=none] (11) at (5, -2) {$e_6$};
+		\node [style=none] (12) at (-0.75, -3.5) {$e_5$};
+		\node [style=none] (13) at (-5.25, -1.75) {$e_4$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=new edge style 0] (6) to (1);
+		\draw [style=new edge style 0] (1) to (2);
+		\draw [style=new edge style 0] (2) to (3);
+		\draw [style=new edge style 0] (6) to (5);
+		\draw [style=new edge style 0] (5) to (4);
+		\draw [style=new edge style 0] (4) to (3);
+		\draw [style=new edge style 0] (1) to (4);
+	\end{pgfonlayer}
+\end{tikzpicture}

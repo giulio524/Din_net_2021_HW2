@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=cerchio vuoto] (0) at (-3, 0) {o};
+		\node [style=cerchio vuoto] (1) at (0, 2) {a};
+		\node [style=cerchio vuoto] (2) at (0, -2) {b};
+		\node [style=cerchio vuoto] (3) at (3, 0) {d};
+		\node [style=none] (4) at (-2.5, 1.75) {};
+		\node [style=none] (5) at (-2.5, -2) {};
+		\node [style=none] (6) at (2.25, 2) {};
+		\node [style=none] (7) at (2.25, -1.75) {};
+		\node [style=none] (8) at (-1.75, 1.25) {e_1};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=freccia] (0) to (1);
+		\draw [style=freccia] (1) to (3);
+		\draw [style=freccia] (2) to (3);
+		\draw [style=freccia] (0) to (2);
+		\draw [style=new edge style 0, bend left, looseness=1.25] (4.center) to (5.center);
+		\draw [bend right, looseness=1.25] (6.center) to (7.center);
+		\draw [bend left] (4.center) to (7.center);
+		\draw [bend right=15, looseness=1.25] (5.center) to (6.center);
+		\draw [style=freccia] (1) to (2);
+	\end{pgfonlayer}
+\end{tikzpicture}
