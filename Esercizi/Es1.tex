@@ -69,5 +69,17 @@
     da cui:
     \[O(n^2) \leq \tau \leq O(n^4)\]
 
+    \questionpart
+    Scegliamo come condizioni iniziali per la convergenza al consenso le seguenti:
+    \[x(0) = (0,1,0,1,0,1, \dots )\]
+    \[y(0) = (0,0,0, \dots ,0,1,1,1, \dots ,1)\]
+    Nel caso di \(x(0)\), \textbf{in ciascuno dei due cluster del grafo barbell, }metà dei nodi ha opinione 1 mentre l'altra metà ha opinione 0. Nel caso di \(y(0)\) tutti i nodi di un cluster hanno opinione 1 mentre tutti i nodi dell'altro cluster hanno opinione 0.
+
+    \lstinputlisting{hw2_es1.m}
+    \begin{figure}[H]
+      \includegraphics[scale=0.45]{figures/es1_plot.jpg}  
+    \end{figure}
+
+    Come si può notare la convergenza per la condizione \(y(0)\) scala molto più lentamente della condizione \(x(0)\) rispetto al numero di nodi. Entrambe sono tuttavia sopra il limite inferiore teorico calcolato al punto precedente. Questo fenomeno dipende dal fatto che nel caso di \(y(0)\) il consenso viene raggiunto utilizando come unico canale di comunicazione il singolo edge che collega i due cluster. Nel caso di \(x(0)\) questo non è necessario dal momento che le due opinioni sono distribuite uniformemente lungo tutto il grafo.
 
     \end{alphaparts}
