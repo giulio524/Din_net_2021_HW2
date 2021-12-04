@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.14)  30 NOV 2021 19:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.14)  4 DEC 2021 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -839,24 +839,33 @@ Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (/home/giulio524/Documenti/GitHub/Din_net_2021_HW2/Esercizi/Es1.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2] (/home/giulio524/Documenti/GitHub/Din_net_2021_HW2/homework.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 32.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 32.
+ [2]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 50.
+ (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [3]) [4] (/home/giulio524/Documenti/GitHub/Din_net_2021_HW2/homework.aux)
 Package rerunfilecheck Info: File `homework.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
 (\end occurred when \ifx on line 40 was incomplete) 
 Here is how much of TeX's memory you used:
- 26662 strings out of 479304
- 502470 string characters out of 5869778
- 958962 words of memory out of 5000000
- 43264 multiletter control sequences out of 15000+600000
- 441996 words of font info for 62 fonts, out of 8000000 for 9000
+ 26714 strings out of 479304
+ 503383 string characters out of 5869778
+ 962962 words of memory out of 5000000
+ 43294 multiletter control sequences out of 15000+600000
+ 463542 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,102p,3294b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/giulio524/Documenti/GitHub/Din_net_2021_HW2/homework.pdf (2 pages, 145804 bytes).
+ 102i,12n,102p,3294b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc} </home/giulio524/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /home/giulio524/Documenti/GitHub/Din_net_2021_HW2/homework.pdf (4 pages, 200327 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
