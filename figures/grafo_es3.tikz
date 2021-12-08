@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-5, 0) {};
+		\node [style=new style 0] (1) at (-4, 0) {$1$};
+		\node [style=new style 0] (2) at (0, 3) {$2$};
+		\node [style=new style 0] (3) at (4, 0) {$3$};
+		\node [style=new style 0] (4) at (0, -3) {$4$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=new edge style 0] (1) to (2);
+		\draw [style=new edge style 0] (2) to (3);
+		\draw [style=new edge style 0] (3) to (1);
+		\draw [style=new edge style 1] (4) to (3);
+		\draw [style=new edge style 1] (1) to (4);
+		\draw [style=new edge style 1] (2) to (4);
+	\end{pgfonlayer}
+\end{tikzpicture}

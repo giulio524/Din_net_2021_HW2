@@ -8,3 +8,4 @@
 
 % Edge styles
 \tikzstyle{new edge style 0}=[->]
+\tikzstyle{new edge style 1}=[<->]

@@ -1,0 +1,45 @@
+
+\begin{alphaparts}
+    \questionpart %----------------A-------------------------------
+    La comunità di agenti si presenta sotto forma del seguente grafo:
+    \ctikzfig{grafo_es3}
+    
+    Dal momento che quest'ultima fortemente connesso, la dinamica delle opinioni raggiunge il consenso:
+    \[x(t) \xrightarrow[]{t\to \infty}(\pi'x(0))\mathbbm{1}\]
+    Dal momento che consideriamo \(x(0)\) come un vettore di variabili aleatorie indipendenti con le varianze date, allora esso avrà una matrice di varianza-covarianza così composta:
+    \[VarCov(x(0)):= V= \begin{bmatrix}
+        0.1 & 0 & 0 & 0 \\
+        0 & 0.3 & 0 & 0\\
+        0 & 0 & 0.2 & 0\\
+        0 & 0 & 0 & 0.2
+    \end{bmatrix}\]
+    Pertanto, utilizzando la formula per la varianza di un prodotto scalare di una V.A. con un vettore costante, si ottiene:
+    \[Var(\pi'x(0)) = \pi' V \pi.\]
+    Si procede quindi con il calcolo di \(\pi\). Essendo il grafo fortemente connesso abbiamo:
+    \[\pi = \frac{\omega}{\mathbbm{1}'\omega}\]
+    pertanto:
+    \[Var(\pi'x(0)) \sim 0.0519\]
+
+    \questionpart %----------------B----------------------
+    Sia \(V\) la matrice di varianza-covarianza di una comunità. La varianza del consenso \(\gamma\), se raggiunto, sarà data dalla formula:
+    \[Var(\gamma) = \pi' V \pi\]
+    dove \(\pi\) è la distribuzione stazionaria del grafo che connette la comunità. Costruire un grafo che minimizza la varianza del consenso (e quindi l'errore di misura nel caso di dinamiche di opinioni) significa trovare una \(\pi\) che risolve il seguente problema di minimo:
+    \begin{align*}
+        \text{minimize:} \quad & \pi'V\pi \\
+        \text{subject to:} \quad &\mathbbm{1}'\pi = 1 \\
+        & \pi \geq  0
+    \end{align*}
+
+    Risolvendo il problema senza considerare il constraint di non negatività si ottiene la funzione lagrangiana:
+    \[\mathcal{L}(\pi, \lambda) = \pi'V\pi + \lambda(\mathbbm{1}'\pi- 1)\]
+    e risolvendo il sistema:
+    \begin{equation*}
+        \begin{cases} \nabla_{\pi} \mathcal{L} = 2V\pi + \lambda \mathbbm{1} = 0 \\
+        \nabla_{\lambda} \mathcal{L} = \mathbbm{1}'\pi- 1 = 0\end{cases} 
+    \end{equation*}
+    si trova la soluzione:
+    \begin{equation}
+        \pi^* = \frac{1}{\mathbbm{1}'V\mathbbm{1}} V^{- 1} \mathbbm{1}.
+    \end{equation}
+    Osserviamo che, poiché \(V\) in quanto matrice di varianza-covarianza, è semidefinita positiva, necessariamente \(\pi^*\) è un vettore non negativo, pertanto il constraint di non negatività è automaticamente soddisfatto.
+\end{alphaparts}
