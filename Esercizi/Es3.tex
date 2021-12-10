@@ -38,7 +38,7 @@
         \nabla_{\lambda} \mathcal{L} = \mathbbm{1}'\pi- 1 = 0\end{cases} 
     \end{equation*}
     si trova la soluzione:
-    \begin{equation}
+    \begin{equation}\label{optimal_pi}
         \pi^* = \frac{1}{\mathbbm{1}'V\mathbbm{1}} V^{- 1} \mathbbm{1}.
     \end{equation}
     Osserviamo che, poiché \(V\) in quanto matrice di varianza-covarianza, è semidefinita positiva, necessariamente \(\pi^*\) è un vettore non negativo, pertanto il constraint di non negatività è automaticamente soddisfatto.
@@ -70,5 +70,39 @@
     \end{gather*}
     Pertanto \(\overline{\pi}\) è una misura stazionaria del nuovo grafo. Affinché \(\overline{\pi}\) diventi una distribuzione, bisogna normalizzarla. Quindi:
     \[\hat{\pi} = \frac{\mathbbm{1}'\omega}{\mathbbm{1}'\alpha+\mathbbm{1}'\omega}\overline{\pi} = \frac{\alpha+ \omega}{\mathbbm{1}'\alpha+\mathbbm{1}'\omega}\]
-    è effettivamente una distribuzione stazionaria di \(\overline{P}\)
+    è effettivamente una distribuzione stazionaria di \(\overline{P}\). Utilizzando ora \ref{optimal_pi} impostiamo l'equazione per trovare il valore ottimale di \(\alpha\):
+    \[\hat{\pi}(\alpha) = \frac{\alpha+ \omega}{\mathbbm{1}'\alpha+\mathbbm{1}'\omega} = \frac{1}{\mathbbm{1}'V^{-1}\mathbbm{1}}V^{-1}\mathbbm{1}. \]
+    poiché
+    \[V^{-1} = \begin{bmatrix}
+        10 & 0 & 0 & 0 \\
+        0 & \frac{10}{3} & 0 & 0 \\
+        0 & 0 & 5 & 0\\
+        0 & 0 & 0 & 5
+    \end{bmatrix}, \quad\quad \mathbbm{1}'V^{-1}\mathbbm{1} = \frac{70}{3}, \quad\quad \mathbbm{1}'\omega = 9 \]
+    si ottiene il sistema:
+    \[\begin{cases}
+        \alpha_1 + 2 = \left(\frac{27+ 3(\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4)}{70}\right)10\\
+        \alpha_2 + 2 = \left(\frac{27+ 3(\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4)}{70}\right) \frac{10}{3}\\
+        \alpha_3+ 2 = \left(\frac{27+ 3(\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4)}{70}\right) 5\\
+        \alpha_4 + 3 = \left(\frac{27+ 3(\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4)}{70}\right) 5
+    \end{cases}\]
+
+    da cui si ottengono le soluzioni:
+    \[\alpha^*(h) = \begin{pmatrix}
+        2h+ 4 \\ \frac{2}{3}h \\ h+ 1 \\ h
+    \end{pmatrix}\]
+    Tra queste, quella che minimizza \(\mathbbm{1}'\alpha\), è
+    \[\alpha^* = \begin{pmatrix}
+        4 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}\] 
+
+    \questionpart %-------------d------------------------------------------
+    Analogamente al punto (b) valcoliamo la varianza del consenso come varianza di un prodotto scalare tra un vettore costante e un vettore aleatorio. Questa volta \(VarCov(x(0))= A\), pertanto:
+    \[Var(\pi'x(0)) = \pi'A\pi \sim 0.1025\]
+
+    \questionpart %--------------e-----------------------------------------
+
+
+
+    
 \end{alphaparts}

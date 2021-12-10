@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1639128084 "c:/Users/giuli/Documents/GitHub/Din_net_2021_HW2/homework.tex" "homework.pdf" "homework" 1639128086
+["pdflatex"] 1639149981 "c:/Users/giuli/Documents/GitHub/Din_net_2021_HW2/homework.tex" "homework.pdf" "homework" 1639149983
   "Esercizi/Es1.tex" 1638958003 6998 f7beec9760899be9989b6a89b66fe264 ""
-  "Esercizi/Es3.tex" 1639128084 5195 09b7c75a6a6e717f37b26cb6567bf15a ""
+  "Esercizi/Es3.tex" 1639149980 6841 8ad05a5f5e831710c60bc6d835aa931d ""
   "Stilegrafo.tikzstyles" 1638958554 399 1656b5744f913ca09b4a6aaee188fe2a ""
   "c:/Users/giuli/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1629466426 7808 5bd38ff2f527780fa20871438992bc7e ""
   "c:/Users/giuli/Documents/GitHub/Din_net_2021_HW2/homework.tex" 1638958062 2429 dea184ae9c44f7e1e261faf0d32e11bc ""
@@ -285,15 +285,15 @@
   "c:/texlive/2021/texmf.cnf" 1625388930 713 e69b156964470283e0530f5060668171 ""
   "figures/es1_plot.jpg" 1638958003 33011 87530c5599bfa61bc82410759485dbbc ""
   "figures/grafo_es3.tikz" 1638958277 644 2acecab5dd9a70bffbd6115c6775ca81 ""
-  "homework.aux" 1639128086 799 5c9f4cae1d7794e1e08d4be58dbd135d "pdflatex"
+  "homework.aux" 1639149983 847 c27573b5a461d4e9a550d37f02f8553a "pdflatex"
   "homework.cls" 1638958003 5735 870888d4c585315eca3f91cc8294cf09 ""
-  "homework.out" 1639128086 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "homework.out" 1639149982 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "homework.tex" 1638958062 2429 dea184ae9c44f7e1e261faf0d32e11bc ""
   "hw2_es1.m" 1638958003 1486 9430dde56b1790753c5263cfb996bf87 ""
   "mcode.sty" 1638958003 11774 e3c3290432e60d7d82bde7534454793e ""
   "tikzit.sty" 1638958003 1248 bd3a4ee1dccdce0fc641973c4461749d ""
   (generated)
-  "homework.out"
-  "homework.log"
-  "homework.aux"
   "homework.pdf"
+  "homework.out"
+  "homework.aux"
+  "homework.log"
