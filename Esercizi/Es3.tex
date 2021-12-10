@@ -42,4 +42,33 @@
         \pi^* = \frac{1}{\mathbbm{1}'V\mathbbm{1}} V^{- 1} \mathbbm{1}.
     \end{equation}
     Osserviamo che, poiché \(V\) in quanto matrice di varianza-covarianza, è semidefinita positiva, necessariamente \(\pi^*\) è un vettore non negativo, pertanto il constraint di non negatività è automaticamente soddisfatto.
+    Osserviamo inoltre che, nel caso in cui \(V\) sia una matrice diagonale, la soluzione \(\pi^*\) trovata è tale per cui viene dato più peso ai nodi che hanno meno varianza: questo ha senso dal momento che se si considera la varianza come "errore di misura" allora per minimizzare questo errore al consenso bisogna dare più centralità ai nodi "esperti" ossia quelli con varianza bassa.
+
+    \questionpart %-----------C------------------------------------
+
+    Consideriamo il nuovo grafo con i self-loop e definiamo le quantità:
+    \begin{gather*}
+        \overline{W}= diag(\alpha)+ W\\
+        \overline{\omega}= \omega+ \alpha\\
+        \overline{D}= diag(\overline{\omega})
+    \end{gather*}
+    Dove \(\overline{W}\) e \(\overline{\omega}\) sono rispettivamente la matrice di adiacenza e il vettore degli out-degree del nuovo grafo. Calcoliamo ora la matrice stocastica \(\overline{P}\) del nuovo grafo:
+    \begin{gather*}
+        \overline{P}= \overline{D}^{-1}\overline{W}\left(diag(\alpha)+ diag(\omega)\right)^{-1}\left(diag(\alpha)+ W\right)=\\
+        =\left(diag(\alpha)+ diag(\omega)\right)^{-1}\left(diag(\alpha)+ diag(\omega)P\right)=\\
+        = \left(diag(\alpha)+ diag(\omega)\right)^{-1}diag(\omega)P + \left(diag(\alpha)+ diag(\omega)\right)^{-1}diag(\alpha)
+    \end{gather*} 
+    Poiché \(\frac{\alpha}{\alpha+ \omega}= 1- \frac{\omega}{\alpha+ \omega}\), se definiamo il vettore \(a= \frac{\omega}{\alpha+ \omega}\), allora dai precedenti calcoli si ottiene\footnote{Con questa notazione si intende dire che \(a_i = \frac{\omega_i}{\alpha_i + \omega_i}\) pertanto \(diag(a) = diag(\frac{\omega}{\alpha+ \omega}) = \left(diag(\alpha)+ diag(\omega)\right)^{-1}diag(\omega) \).}:
+    \[\overline{P}= diag(a)P+ I- diag(a).\]
+    Osserviamo a questo punto che se definiamo 
+    \[\overline{\pi} = diag(a)^{-1}\pi,\]
+    dove \(\pi\) è la distribuzione stazionaria del grafo senza self loop, allora segue che:
+    \begin{gather*}
+        \overline{P}'\overline{\pi}=\left(diag(a)P+ I- diag(a)\right)'diag(a)^{-1}\pi = \\
+        = \left(P'diag(a)+ I- diag(a)\right)diag(a)^{-1}\pi= \\
+        = diag(a)^{-1}\pi- \pi+ P'\pi = \overline{\pi}.
+    \end{gather*}
+    Pertanto \(\overline{\pi}\) è una misura stazionaria del nuovo grafo. Affinché \(\overline{\pi}\) diventi una distribuzione, bisogna normalizzarla. Quindi:
+    \[\hat{\pi} = \frac{\mathbbm{1}'\omega}{\mathbbm{1}'\alpha+\mathbbm{1}'\omega}\overline{\pi} = \frac{\alpha+ \omega}{\mathbbm{1}'\alpha+\mathbbm{1}'\omega}\]
+    è effettivamente una distribuzione stazionaria di \(\overline{P}\)
 \end{alphaparts}
