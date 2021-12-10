@@ -101,7 +101,29 @@
     \[Var(\pi'x(0)) = \pi'A\pi \sim 0.1025\]
 
     \questionpart %--------------e-----------------------------------------
-
+    Utilizzando lo stesso procedimento del punto (c) impostiamo l'equazione per trovare il valore ottimale di \(\alpha\), questa volta con una matrice di varianza covarianza diversa:
+    \[\hat{\pi}(\alpha) = \frac{\alpha+ \omega}{\mathbbm{1}'\alpha+\mathbbm{1}'\omega} = \frac{1}{\mathbbm{1}'A^{-1}\mathbbm{1}}A^{-1}\mathbbm{1}. \]
+    poiché
+    \[\frac{1}{\mathbbm{1}'A^{-1}\mathbbm{1}}A^{-1}\mathbbm{1} = \begin{pmatrix}
+        1/4 \\ 1/4 \\ 1/4 \\ 1/4
+    \end{pmatrix}\]
+    si ottiene il sistema:
+    \[
+        \begin{cases}
+            \alpha_1 + 2 = (\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 + 9) \frac{1}{4} \\
+            \alpha_2 + 2 = (\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 + 9) \frac{1}{4} \\
+            \alpha_3 + 2 = (\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 + 9) \frac{1}{4} \\
+            \alpha_4 + 3 = (\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 + 9) \frac{1}{4}
+        \end{cases}\]
+        da cui si ottengono le soluzioni:
+        \[
+            \alpha= \begin{pmatrix}
+                1+ h \\ 1+ h \\ 1+ h \\ h
+            \end{pmatrix}.\]
+        Tra queste, quella che minimizza la quantità \(\mathbbm{1}'\alpha\) è pari a:
+        \[\alpha^* = \begin{pmatrix}
+            1 \\ 1 \\ 1 \\ 0
+        \end{pmatrix}\]
 
 
     
