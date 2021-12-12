@@ -1346,6 +1346,10 @@ INPUT ./figures/grafo_es3.tikz
 INPUT ./figures/grafo_es3.tikz
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm9.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm5.tfm
+INPUT ./Esercizi/es4_davide.tex
+INPUT Esercizi/es4_davide.tex
+INPUT ./Esercizi/es4_davide.tex
+INPUT Esercizi/es4_davide.tex
 INPUT homework.aux
 INPUT ./homework.out
 INPUT ./homework.out

@@ -2,19 +2,19 @@
 \begin{alphaparts}
     \questionpart %----------------A-------------------------------
    \ctikzfig{grafo_es2_a}
-Posizionando il nodo stubborn sul nodo $n_0$ in figura (ovvero il nodo madre dell’albero) l’agente $A$ avrebbe la certezza che l’opinione finale di ogni agente sia esattamente $1$. Il nodo stubborn è infatti global reachable e ciò implica che l’opinione finale di tutti i nodi sarà una combinazione convessa del solo valore $1$. 
+Posizionando il nodo stubborn sul nodo $n_0$ in figura (ovvero il nodo madre dell’albero) l’agente $A$ avrebbe la certezza che l’opinione finale di ogni agente sia esattamente $1$. Il nodo stubborn è infatti \textit{globally reachable} e ciò implica che l’opinione finale di tutti i nodi sarà una combinazione convessa del solo valore $1$. 
 A questo punto il giocatore $B$ deve posizionare il suo nodo stubborn con valore $0$ in modo da rendere più vicina a $0$ possibile la media di opinioni finale.
 Per farlo è sufficiente porre il suo nodo stubborn su $n_2$ ovvero sul figlio destro del nodo $1$. in questo modo l’opinione finale di tutti i nodi della parte destra del grafo sarà pari a $0$.
 Questa è la scelta ottimale in quanto se posizionasse il nodo stubbron su $n_1$ (figlio sinistro di $n_0$) si avrebbero tutti i nodi della parte sinistra dell’albero con opinione finale nulla ma essi sono in numero minore rispetto ai nodi nella parte destra e ciò implicherebbe una media finale maggiore.
-Se infine, il nodo stubborn venisse posizionato su uno qualsiasi degli altri nodi, l’opinione finale dei nodi compresi tra i due stubbron sarebbe una combinazione convessa dei valori di questi ultimi. Anche in questo caso, il giocatore $B$ non riuscirebbe ad ottenere il minimo valor medio di opinione possibile. 
+Se infine, il nodo stubborn venisse posizionato su uno qualsiasi degli altri nodi, l’opinione finale dei nodi compresi tra i due stubborn sarebbe una combinazione convessa dei valori di questi ultimi. Anche in questo caso, il giocatore $B$ non riuscirebbe ad ottenere il minimo valor medio di opinione possibile. 
    
 
     
 
     \questionpart %----------------B-------------------------------
 
-Per le osservazioni al punto precedente il giocatore $B$ dovrebbe posizionare il nodo stubborn ancora una volta su $n_2$, in questo modo la scelta ottimale per il giocatore $A$ sarebbe necessariamente il nodo $n_1$, ma la media di opinioni finale sarà più vicina a zero per via della maggior presenza di nodi nella parte destra dell’albero.
+Per le osservazioni al punto precedente il giocatore $B$ dovrebbe posizionare il nodo stubborn ancora una volta su $n_2$, in questo modo la scelta ottimale per il giocatore $A$ sarebbe necessariamente il nodo $n_0$, ma la media di opinioni finale sarà più vicina a zero per via della maggior presenza di nodi nella parte destra dell’albero.
  \ctikzfig{grafo_es2_b}
-
+Pertanto, per entrambi i punti dell'esercizio, la configurazione che porta il giocatore \(B\) alla vittoria è quella mostrata nella figura.
     
 \end{alphaparts}

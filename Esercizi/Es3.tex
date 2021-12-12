@@ -4,9 +4,9 @@
     La comunità di agenti si presenta sotto forma del seguente grafo:
     \ctikzfig{grafo_es3}
     
-    Dal momento che quest'ultima fortemente connesso, la dinamica delle opinioni raggiunge il consenso:
-    \[x(t) \xrightarrow[]{t\to \infty}(\pi'x(0))\mathbbm{1}\]
-    Dal momento che consideriamo \(x(0)\) come un vettore di variabili aleatorie indipendenti con le varianze date, allora esso avrà una matrice di varianza-covarianza così composta:
+    Dal momento che quest'ultimo è fortemente connesso, la dinamica delle opinioni raggiunge il consenso:
+    \[x(t) \xrightarrow[]{t\to \infty}(\pi'x(0))\mathbbm{1}.\]
+    Poiché consideriamo \(x(0)\) come un vettore di variabili aleatorie indipendenti con le varianze date, allora esso avrà una matrice di varianza-covarianza così composta:
     \[VarCov(x(0)):= V= \begin{bmatrix}
         0.1 & 0 & 0 & 0 \\
         0 & 0.3 & 0 & 0\\
@@ -54,7 +54,7 @@
     \end{gather*}
     Dove \(\overline{W}\) e \(\overline{\omega}\) sono rispettivamente la matrice di adiacenza e il vettore degli out-degree del nuovo grafo. Calcoliamo ora la matrice stocastica \(\overline{P}\) del nuovo grafo:
     \begin{gather*}
-        \overline{P}= \overline{D}^{-1}\overline{W}\left(diag(\alpha)+ diag(\omega)\right)^{-1}\left(diag(\alpha)+ W\right)=\\
+        \overline{P}= \overline{D}^{-1}\overline{W}=\left(diag(\alpha)+ diag(\omega)\right)^{-1}\left(diag(\alpha)+ W\right)=\\
         =\left(diag(\alpha)+ diag(\omega)\right)^{-1}\left(diag(\alpha)+ diag(\omega)P\right)=\\
         = \left(diag(\alpha)+ diag(\omega)\right)^{-1}diag(\omega)P + \left(diag(\alpha)+ diag(\omega)\right)^{-1}diag(\alpha)
     \end{gather*} 
@@ -97,7 +97,7 @@
     \end{pmatrix}\] 
 
     \questionpart %-------------d------------------------------------------
-    Analogamente al punto (b) valcoliamo la varianza del consenso come varianza di un prodotto scalare tra un vettore costante e un vettore aleatorio. Questa volta \(VarCov(x(0))= A\), pertanto:
+    Analogamente al punto (b) calcoliamo la varianza del consenso come varianza di un prodotto scalare tra un vettore costante e un vettore aleatorio. Questa volta \(VarCov(x(0))= A\), pertanto:
     \[Var(\pi'x(0)) = \pi'A\pi \sim 0.1025\]
 
     \questionpart %--------------e-----------------------------------------

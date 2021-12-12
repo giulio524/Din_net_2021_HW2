@@ -1,0 +1,50 @@
+\begin{alphaparts}
+    \questionpart %----------------A-------------------------------
+    
+Definito $t_{k}$ come il tempo del $k$-esimo contagio, pertanto $\tilde{T}_{k} := t_{k+1} - t_{k}$ rappresenta il tempo di attesa per il prossimo contagio. È noto che $\tilde{T}_{k}$ condizionato ad $X(t)$ ha distribuzione esponenziale $\beta\,B(t_{k})$ e quindi
+\[\mathbb{E} [ \tilde{T}_{k} \,\vert\, X(t_{k}) ] = \frac{1}{\beta\,B(t_{k})}.\]
+Di conseguenza, partendo da un numero di $k_{0}$ contagiati, il tempo medio di assorbimento nella configurazione con tutti i nodi infetti, $\tau = \mathbb{E}[\mathbb{T}_{1}]$, si può scrivere come
+\begin{align}
+\tau &= \mathbb{E} [ \tilde{T}_{k_{0}} \,\vert\, X(t_{k_{0}}) ] +  \mathbb{E} [ \tilde{T}_{k_{0}+1} \,\vert\, X(t_{k_{0}+1}) ] + ... +  \mathbb{E} [ \tilde{T}_{n-1} \,\vert\, X(t_{n-1}) ] \nonumber\\
+&= \sum_{k=k_{0}}^{n-1} \mathbb{E} [ \tilde{T}_{k} \,\vert\, X(t_{k}) ] \nonumber\\
+&= \sum_{k=k_{0}}^{n-1} \frac{1}{\beta\,B(t_{k})}.\nonumber
+\end{align}
+Ad un dato istante di tempo $t_{k}$ è possibile suddividere l'insieme dei nodi $V$ in due sottoinsiemi:
+\[ S_{k} : = \{ i : X_{i}(t_{k}) = 0 \} \]
+\[ I_{k} : = \{ i : X_{i}(t_{k}) = 0 \} = V\setminus S_{k} \]
+Si osserva ora che 
+\begin{align}
+B(t_{k})  &:= \sum_{i} \,\sum_{j} W_{ij}(1-X_{i}(t_{k}))X_{j}(t_{k}) \nonumber\\
+&= \sum_{i} \sum_{j\in V\setminus S_{k} } W_{ij}(1-X_{i}(t_{k}))\nonumber\\
+&= \sum_{i\in S_{k}} \sum_{j\in V\setminus S_{k} } W_{ij}.\nonumber
+\end{align}
+Si nota che \(\vert S_{k} \vert = n-k\), pertanto
+\[\gamma(n-k) : = \min_{S\subset V : \vert S \vert = n - k} \sum_{i\in S_{k}} \sum_{j\in V\setminus S_{k} } W_{ij} \le \sum_{i\in S_{k}} \sum_{j\in V\setminus S_{k} } W_{ij} = B(t_{k}). \]
+A questo punto ritornando ai conti fatti su $\tau$ si ha che
+\begin{align}
+\tau &=\sum_{k=k_{0}}^{n-1} \frac{1}{\beta\,B(t_{k})}\nonumber\\
+& \le \frac{1}{\beta}\left(\frac{1}{\gamma(n-k_{0})}+\frac{1}{\gamma(n-k_{0}-1)}+\frac{1}{\gamma(1)}\right)\nonumber\\
+& \le \frac{1}{\beta} \sum_{k = 1}^{n-k_{0}} \frac{1}{\gamma(k)} \le \frac{1}{\beta} \sum_{k = 1}^{n-1} \frac{1}{\gamma(k)}.\nonumber
+\end{align}
+Ora si spezza la sommatoria su $k$ nel modo seguente
+\[ \sum_{k = 1}^{n-1} \frac{1}{\gamma(k)} = \sum_{k = 1}^{\lfloor n/2\rfloor} \frac{1}{\gamma(k)} + \sum_{k = \lfloor n/2\rfloor}^{n-1} \frac{1}{\gamma(k)}.\]
+A questo punto, se si prova che 
+\[\sum_{k = 1}^{\lfloor n/2\rfloor} \frac{1}{\gamma(k)} \ge \sum_{k = \lfloor n/2\rfloor}^{n-1} \frac{1}{\gamma(k)} \]
+si ottiene quanto dev'essere dimostrato nell'esercizio.
+
+Poiché il grafo è \textit{undirected}, $W$ è simmetrica e quindi
+\[\sum_{i\in S_{k}} \sum_{j\in V\setminus S_{k} } W_{ij} =  \sum_{j\in V\setminus S_{k} } \sum_{i\in S_{k}} W_{ji} = \sum_{i\in V\setminus S_{k} } \sum_{j\in S_{k}} W_{ij}. \]
+Ponendo ora \( S^{c} := V\setminus S \) e osservando che se \( \vert S \vert = k\) allora \(\vert S^{c} \vert = n-k\) si può vedere che
+\begin{align}
+\gamma(k) &= \min_{S\subset V : \vert S \vert = k} \sum_{i\in S}\sum_{j\in S^{c}} W_{ij} \nonumber\\
+&= \min_{S\subset V : \vert S \vert = k} \sum_{i\in S^{c}}\sum_{j\in S} W_{ij} \nonumber\\
+&= \min_{S^{c}\subset V : \vert S^{c} \vert = n - k} \sum_{i\in S^{c}}\sum_{j\in S} W_{ij} \nonumber\\
+&= \gamma(n-k). \nonumber
+\end{align}
+Quindi, in particolare,
+\[ \gamma(k) \le \gamma(n-k) \]
+da cui segue che
+\[\sum_{k = 1}^{\lfloor n/2\rfloor} \frac{1}{\gamma(k)} \ge \sum_{k = \lfloor n/2\rfloor}^{n-1} \frac{1}{\gamma(k)}, \]
+ossia
+\[\sum_{k = 1}^{n - 1} \frac{1}{\gamma(k)} \le 2\,\sum_{k = 1}^{\lfloor n/2\rfloor} \frac{1}{\gamma(k)}. \]
+\end{alphaparts}
